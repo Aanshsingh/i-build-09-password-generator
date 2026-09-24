@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="card">
+      <h1 class="title">Password Generator</h1>
+ 
+      <button class="passwordDisplay" id="passwordDisplay">Click Generate</button>
+ 
+      <div class="lengthSection">
+        <div class="lengthLabel">LENGTH: <span id="lengthValue">16</span></div>
+        <div class="sliderRow">
+          <span class="sliderMin">4</span>
+          <input type="range" id="lengthSlider" min="4" max="32" value="16" />
+          <span class="sliderMax">32</span>
+        </div>
+      </div>
+ 
+      <div class="settingsLabel">SETTINGS</div>
+ 
+      <div class="settingRow">
+        <span>Include Uppercase</span>
+        <label class="switch">
+          <input type="checkbox" id="uppercase" checked />
+          <span class="slider"></span>
+        </label>
+      </div>
+ 
+      <div class="settingRow">
+        <span>Include Lowercase</span>
+        <label class="switch">
+          <input type="checkbox" id="lowercase" checked />
+          <span class="slider"></span>
+        </label>
+      </div>
+ 
+      <div class="settingRow">
+        <span>Include Numbers</span>
+        <label class="switch">
+          <input type="checkbox" id="numbers" checked />
+          <span class="slider"></span>
+        </label>
+      </div>
+ 
+      <div class="settingRow">
+        <span>Include Symbols</span>
+        <label class="switch">
+          <input type="checkbox" id="symbols" />
+          <span class="slider"></span>
+        </label>
+      </div>
+ 
+      <button class="generateBtn" id="generateBtn">Generate Password</button>
+    </div>
+ 
+    <script src="script.js"></script>
+  </body>
+</html>
+ 

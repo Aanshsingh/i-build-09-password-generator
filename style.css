@@ -1,0 +1,211 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+ 
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: #4f8ef7;
+  padding: 24px;
+}
+ 
+.card {
+  width: 480px;
+  max-width: 100%;
+  background: #131a2e;
+  border-radius: 18px;
+  padding: 30px 32px 32px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35);
+}
+ 
+.title {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 22px;
+}
+ 
+/* ---------- Password display ---------- */
+.passwordDisplay {
+  width: 100%;
+  background: #1c2440;
+  border: none;
+  border-radius: 10px;
+  color: #cfd3e6;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 22px 16px;
+  cursor: pointer;
+  margin-bottom: 24px;
+  font-family: 'Courier New', monospace;
+  word-break: break-all;
+  transition: background 0.15s;
+}
+.passwordDisplay:hover {
+  background: #222c4d;
+}
+.passwordDisplay.copied {
+  color: #7c8cff;
+}
+ 
+/* ---------- Length section ---------- */
+.lengthSection {
+  margin-bottom: 26px;
+}
+ 
+.lengthLabel {
+  color: #aab0c6;
+  font-size: 13px;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+.lengthLabel span {
+  color: #fff;
+  font-weight: 700;
+}
+ 
+.sliderRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+ 
+.sliderMin,
+.sliderMax {
+  color: #aab0c6;
+  font-size: 15px;
+  font-weight: 500;
+}
+ 
+#lengthSlider {
+  flex: 1;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(to right, #6c7bff var(--fill, 40%), #2a3252 var(--fill, 40%));
+  outline: none;
+}
+#lengthSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+#lengthSlider::-moz-range-thumb {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+#lengthSlider::-moz-range-track {
+  height: 4px;
+  border-radius: 999px;
+  background: #2a3252;
+}
+#lengthSlider::-moz-range-progress {
+  height: 4px;
+  border-radius: 999px;
+  background: #6c7bff;
+}
+ 
+/* ---------- Settings ---------- */
+.settingsLabel {
+  color: #aab0c6;
+  font-size: 13px;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+ 
+.settingRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #1c2440;
+  border-radius: 10px;
+  padding: 18px 20px;
+  margin-bottom: 14px;
+  color: #e4e6f0;
+  font-size: 17px;
+}
+ 
+/* iOS-style toggle switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 54px;
+  height: 30px;
+  flex-shrink: 0;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.switch .slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background: #3a4266;
+  border-radius: 999px;
+  transition: background 0.2s;
+}
+.switch .slider::before {
+  content: "";
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  left: 3px;
+  top: 3px;
+  border-radius: 50%;
+  background: #fff;
+  transition: transform 0.2s;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+.switch input:checked + .slider {
+  background: linear-gradient(135deg, #7b6cf6, #5c6cf0);
+}
+.switch input:checked + .slider::before {
+  transform: translateX(24px);
+}
+ 
+/* ---------- Generate button ---------- */
+.generateBtn {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  padding: 18px;
+  margin-top: 6px;
+  background: linear-gradient(135deg, #7b8cf7, #9a6cf0);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: filter 0.15s, transform 0.1s;
+}
+.generateBtn:hover {
+  filter: brightness(1.08);
+}
+.generateBtn:active {
+  transform: scale(0.99);
+}
+.generateBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+ 
